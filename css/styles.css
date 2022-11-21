@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/* Aquí definimos las Custom properties */
+:root {
+  --light-grey: hsl(225, 100%, 94%);
+  --blue: hsl(245, 75%, 52%);
+  --blue-alpha: hsl(245, 75%, 52%, .2);
+  --light-white: hsl(225, 100%, 98%);
+  --white: white;
+  --grey: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --hover: rgb(118,99,241);
+  /* Tipografía */
+  --tipo-principal: "Red Hat Display", sans-serif;
+}
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--dark-blue);
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  background: var(--light-grey) url(/images/pattern-background-desktop.svg) no-repeat center top;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  max-width: 23rem;
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+@media (max-width: 375px) {
+  .card {
+    min-width: 283px;
+  }
+}
+
+.banner {
+  background-color: red;
+}
+.banner__img {
+  min-height: 10em;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 2.5em auto;
+}
+@media (max-width: 375px) {
+  .wrapper {
+    width: 85%;
+    margin: 2em auto;
+  }
+}
+
+.summary {
+  margin-bottom: 2em;
+  text-align: center;
+}
+@media (max-width: 375px) {
+  .summary {
+    margin-bottom: 1.5em;
+  }
+}
+.summary__h1 {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-bottom: 0.8em;
+}
+.summary__p {
+  line-height: 1.5em;
+  color: var(--grey);
+}
+
+.plan {
+  background-color: var(--light-white);
+  border-radius: 0.5em;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.plan__icon {
+  width: 3em;
+  margin-right: 1em;
+}
+.plan__wrapper {
+  align-items: flex-start;
+  margin-right: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3em;
+}
+.plan__tittle {
+  font-weight: 700;
+}
+.plan__price {
+  color: var(--grey);
+}
+.plan__link {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.9em;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+.plan__link:hover {
+  color: var(--hover);
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.footer__btn {
+  background-color: var(--blue);
+  color: var(--white);
+  width: 100%;
+  padding: 1.5em 0;
+  font-weight: 900;
+  border-radius: 1em;
+  font-size: 0.9em;
+  box-shadow: 0px 20px 15px var(--blue-alpha);
+  transition: all 0.2s ease-in-out;
+}
+.footer__btn:hover {
+  background-color: var(--hover);
+  cursor: pointer;
+}
+.footer__btnCancel {
+  background-color: transparent;
+  font-weight: 900;
+  font-size: 0.9em;
+  color: var(--grey);
+  transition: all 0.2s ease-in-out;
+}
+.footer__btnCancel:hover {
+  color: var(--dark-blue);
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */

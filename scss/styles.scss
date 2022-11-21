@@ -1,0 +1,134 @@
+@import "reset", "mixins"; 
+
+html {
+  font-size: 16px;
+
+  @media (max-width: 375px){
+    font-size: 12px;
+  }
+}
+
+body {
+  background: var(--light-grey) url(/images/pattern-background-desktop.svg) no-repeat center top;
+  @include flex (row, nowrap, center, center);
+}
+
+.card {
+  background-color: var(--white);
+  max-width: 23rem;
+  border-radius: 1.5em;
+  overflow: hidden;
+
+  @media (max-width: 375px){
+    min-width: 283px;
+  }
+}
+
+.banner {
+  background-color: red;
+  // margin: 0 0 3em 0;
+  &__img {
+    min-height: 10em;
+  }
+}
+
+.wrapper {
+  width: 80%;
+  margin: 2.5em auto;
+
+  @media (max-width: 375px){
+    width: 85%;
+    margin: 2em auto;
+  }
+}
+
+.summary {
+  margin-bottom: 2em;
+  text-align: center;
+
+  @media (max-width: 375px){
+    margin-bottom: 1.5em;
+    
+  }
+  &__h1 {
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-bottom: .8em;
+  }
+
+  &__p {
+    line-height: 1.5em;
+    color: var(--grey);
+  }
+}
+
+.plan {
+  background-color: var(--light-white);
+  border-radius: .5em;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  @include flex (row, nowrap, flex-start, center);
+  &__icon {
+    width: 3em;
+    margin-right: 1em;
+  }
+  &__wrapper {
+    align-items: flex-start;
+    margin-right: auto;
+    @include flex (column, nowrap, center, center);
+    gap: .3em;
+    
+  }
+  &__tittle {
+    font-weight: 700;
+  }
+  &__price {
+    color: var(--grey);
+  }
+  &__link {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: .9em;
+    text-decoration: underline;
+    transition: all .2s ease-in-out;
+    &:hover {
+      color: var(--hover);
+      text-decoration: none;
+    }
+  }
+
+}
+
+.footer {
+  @include flex (column, nowrap, center, center);
+  gap: 1.5em;
+  &__btn {
+    background-color: var(--blue);
+    color: var(--white);
+    width: 100%;
+    padding: 1.5em 0;
+    font-weight: 900;
+    border-radius: 1em;
+    font-size: .9em;
+    box-shadow: 0px 20px 15px var(--blue-alpha);
+    transition: all .2s ease-in-out;
+    &:hover {
+      background-color: var(--hover);
+      cursor: pointer;
+    }
+  }
+
+  &__btnCancel {
+    background-color: transparent;
+    font-weight: 900;
+    font-size: .9em;
+    color: var(--grey);
+    transition: all .2s ease-in-out;
+    &:hover {
+      color: var(--dark-blue);
+      cursor: pointer;
+    }
+  }
+}
+
+
