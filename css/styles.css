@@ -116,11 +116,17 @@ html {
 }
 
 body {
-  background: var(--light-grey) url(/images/pattern-background-desktop.svg) no-repeat center top;
+  background: var(--light-grey) url(../images/pattern-background-desktop.svg) no-repeat center top;
+  background-size: 100vw;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 375px) {
+  body {
+    background-image: url(../images/pattern-background-mobile.svg);
+  }
 }
 
 .card {
