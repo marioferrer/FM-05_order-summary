@@ -11,7 +11,6 @@ html {
 body {
   background: var(--light-grey) url(../images/pattern-background-desktop.svg) no-repeat center top;
   background-size: 100vw;
-  background-color: red;
   @include flex (row, nowrap, center, center);
 
   @media (max-width: 375px) {

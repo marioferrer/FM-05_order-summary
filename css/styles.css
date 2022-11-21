@@ -118,7 +118,6 @@ html {
 body {
   background: var(--light-grey) url(../images/pattern-background-desktop.svg) no-repeat center top;
   background-size: 100vw;
-  background-color: red;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
