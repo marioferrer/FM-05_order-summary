@@ -24,7 +24,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 ### Links
 
 - Solution Frontend Mentor: [Frontend solution](https://www.frontendmentor.io/solutions/order-summary-tGOy-2H1C6)
-- Live Site: [Live site with GitHub Pages](https://marioferrer.github.io/FM-05_order_summary/)
+- Live Site: [Live site with GitHub Pages](https://marioferrer.github.io/FM-05_order-summary/)
 
 ## My process
 
